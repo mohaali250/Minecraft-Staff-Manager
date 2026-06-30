@@ -15,7 +15,7 @@ StaffManager is a lightweight staff management plugin powered by PySpigot. It pr
 - Optional Discord account linking via DiscordSRV.
 - View staff members and ranks with `/status list`.
 - `/punish` command applies structured punishments defined in `definitions.yml`.
-- Compatible with existing LuckPerms groups not defined in `definitions.yml`.
+- Compatible with existing LuckPerms groups explicitly defined in `definitions.yml`.
 
 If you find a bug, please report it here:  
 [https://github.com/mohaali250/Minecraft-Staff-Manager/issues](https://github.com/mohaali250/Minecraft-Staff-Manager/issues)
