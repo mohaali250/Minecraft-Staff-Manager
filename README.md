@@ -4,54 +4,36 @@
 > Licensed under the PolyForm Noncommercial License 1.0.0  
 > See the LICENSE file for details.
 
-StaffManager is a lightweight staff management plugin powered by PySpigot. It provides tools for managing staff ranks, punishments, and player moderation in a configurable way.
+StaffManager is a lightweight staff management plugin. It provides tools for managing staff ranks, punishments, and player moderation in a configurable way.
+
+### BEFORE USING STAFFMANAGER
+It is highly encouraged that you take your time to read `config.yml` and `definitions.yml`, because the default configuration is supposed to make the first run experience smooth, but it might not fit your server current setup or even lead to unexpected behaviours.
 
 ## Features
 
 - Promote and manage players across configurable staff ranks.
 - Moderate staff using `/suspend`, `/demote`, and `/staffban`.
 - Staff ranks use playtime-based requirements defined in `definitions.yml`.
-- Optional automatic anti-cheat punishment support via GrimAC.
 - Optional Discord account linking via DiscordSRV.
-- View staff members and ranks with `/status list`.
+- View staff members and ranks with `/listplayers`.
 - `/punish` command applies structured punishments defined in `definitions.yml`.
 - Compatible with existing LuckPerms groups explicitly defined in `definitions.yml`.
 
 If you find a bug, please report it here:  
 [https://github.com/mohaali250/Minecraft-Staff-Manager/issues](https://github.com/mohaali250/Minecraft-Staff-Manager/issues)
 
-## Data Usage
-
-StaffManager does **not** collect or transmit any player or server data over the internet.
-
-The plugin only reads data already available on your server, including:
-
-- LuckPerms groups (staff roles)
-- Minecraft player statistics such as playtime (`Statistic.PLAY_ONE_MINUTE`)
-- Discord account links (if DiscordSRV is installed)
-- Anti-cheat violations (if GrimAC is installed)
-
-All data is stored locally in `staff.json` when needed. No data is sent to external services or the plugin author.
-
-Regular backups of `staff.json` are recommended, as data corruption or logic bugs may occur.
-
 ## Requirements
 
-- PySpigot 0.9.1+
 - Bukkit / Paper / Spigot server
 - LuckPerms
 
 Optional:
-- GrimAC
 - DiscordSRV
 
 ## Installation
 
-1. Install [PySpigot](https://modrinth.com/plugin/pyspigot/version/0.9.1) and [LuckPerms](https://modrinth.com/plugin/luckperms) and start the server once.
-2. Place `staffmanager.py` into `/plugins/PySpigot/scripts/`
+1. Install [LuckPerms](https://modrinth.com/plugin/luckperms) and start the server once.
+2. When you have the jar, place it in `/root/plugins`
 3. Restart or reload the server.
-4. Edit `definitions.yml` to configure ranks and punishments.
+4. Review and edit the configuration `config.yml` and the definitions `definitions.yml`. (This step is important)
 
-## Notes
-
-This plugin is powered by PySpigot. It is not affiliated with or endorsed by PySpigot, LuckPerms, DiscordSRV, or GrimAC.
